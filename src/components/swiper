@@ -1,0 +1,17 @@
+        <div v-for="good in allItems" :key="good.id">
+           <h3> {{ good.header }}</h3>
+            <div class="flex gap-4 relative w-fit h-fit ">
+                <button class="absolute left-0 bottom-[30%] bg-[rgba(0,0,0,0.4)]" @click="IncreaseDecreaseBtn(good,'-')">
+                    <img class="rotate-180" src="@/assets/icons/right-chevron.svg" width="40" alt="">
+                </button>
+                <img 
+                :src="getImg(JSON.parse(good.imgsId)[imgSwiperCount])" 
+                alt="" 
+                width="400"
+                >
+                <button class="absolute right-0 bottom-[30%] bg-[rgba(0,0,0,0.4)]" @click="IncreaseDecreaseBtn(good,'+')">
+                    <img src="@/assets/icons/right-chevron.svg" width="40" alt="">
+                </button>
+            </div>
+            <h4>{{ good.price }}</h4>
+        </div>
