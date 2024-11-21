@@ -29,4 +29,8 @@ export const goods = reactive({
     this.current = this.current.filter((good) => good.$id !== id);
     await this.init();
   },
+  async update(id){
+    await databases.updateDocument(GOODS_DATABASE_ID,GOODS_COLLECTION_ID,id)
+    await this.init()
+  }
 });
