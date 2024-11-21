@@ -8,8 +8,10 @@
                 <h3>Добавить новый товар</h3>
             </router-link>
             <div class="flex flex-col justify-center items-center">
-                <img src="../assets/icons/edit.svg" width="80" alt="">
-                <h3>Редактировать</h3>
+                <router-link to="/editItem" class="flex flex-col justify-center items-center">
+                    <img src="../assets/icons/edit.svg" width="80" alt="">
+                    <h3>Редактировать</h3>
+                </router-link>
             </div>
             <div>
                 заказ мебели
@@ -19,6 +21,5 @@
 </template>
 
 <script setup> 
-import { goods } from "../lib/stores/items.js";
 
 </script>

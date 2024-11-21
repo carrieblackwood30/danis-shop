@@ -15,3 +15,14 @@
             </div>
             <h4>{{ good.price }}</h4>
         </div>
+        <script>
+            const imgSwiperCount = ref(0)
+
+            function IncreaseDecreaseBtn(good,type){
+                const switchingGood = ref(allItems.value.find(item => item.$id === good.$id))
+
+                if(type === '+' && switchingGood.value){
+                    imgSwiperCount.value += 1
+                }
+            }
+        </script>

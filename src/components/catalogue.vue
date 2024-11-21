@@ -1,7 +1,7 @@
 <template>
     <section id="catalogue">
         <h3 class="text-center font-semibold text-2xl p-8 mb-4">Каталог</h3>
-       <div class="flex gap-8">
+       <div class="flex gap-8" v-if="allItems">
             <div v-for="good in allItems" :key="good.id">
             <h3> {{ good.header }}</h3>
                 <div class="flex gap-4 relative w-fit h-fit ">
@@ -14,6 +14,9 @@
                 <h4>{{ good.price }}</h4>
             </div>
        </div>
+       <div v-else>
+            loading...
+       </div>
     </section>
 </template>
 
@@ -23,15 +26,6 @@
     import { getImg } from "@/lib/stores/file.js";
     
     const allItems = ref()
-    const imgSwiperCount = ref(0)
-
-    function IncreaseDecreaseBtn(good,type){
-        const switchingGood = ref(allItems.value.find(item => item.$id === good.$id))
-
-        if(type === '+' && switchingGood.value){
-            imgSwiperCount.value += 1
-        }
-    }
 
     onBeforeMount(async() =>{
         await goods.init()

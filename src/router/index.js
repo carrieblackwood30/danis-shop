@@ -3,6 +3,7 @@ import HomeView from '../views/HomeView.vue'
 import loginPage from '@/views/loginPage.vue'
 import contentManage from "../views/contentManage.vue"
 import addNewItem from "../views/addNewItem.vue"
+import editItem from "../views/editItem.vue"
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -26,6 +27,11 @@ const router = createRouter({
       path: '/addNewItem',
       name: 'addNewItem',
       component: addNewItem
+    },
+    {
+      path: '/editItem/',
+      name: 'editItem',
+      component: editItem
     }
   ],
 })

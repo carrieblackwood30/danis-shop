@@ -47,7 +47,6 @@
 
     function addItem(){
 
-        console.log(category.value.name)
 
         if(
             header.value !== ''
@@ -65,6 +64,7 @@
                 description: description.value,
                 price: price.value,
                 imgsId: imgsId.value,
+                categories: category.value.name
             })
         }
 

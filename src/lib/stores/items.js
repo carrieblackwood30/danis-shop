@@ -3,7 +3,7 @@ import { databases } from "@/lib/appwrite.js";
 import { reactive } from "vue";
 
 export const GOODS_DATABASE_ID = "673c5ef400020d220ea3";
-export const GOODS_COLLECTION_ID = "673c5eff0012f7ed0889";
+export const GOODS_COLLECTION_ID = "673ec46800167811124d";
 
 export const goods = reactive({
   current: [],
